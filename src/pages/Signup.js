@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Box, Button, Paper, TextField } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import EmailIcon from "@mui/icons-material/Email";
-import HttpsIcon from "@mui/icons-material/Https"; //password icon
+import HttpsIcon from "@mui/icons-material/Https";//password icon
 import InputAdornment from "@mui/material/InputAdornment";
 //for alert component
 import Alert from "@mui/material/Alert";
@@ -33,7 +33,7 @@ import { useFirestore } from "../myFirebase/myFirestoreFirebase";
 
 const Signup = () => {
   //for authentication
-  const { mySignup, currentUser, myLogout, verifyEmail } = useAuth();
+  const { mySignup, currentUser,myLogout,verifyEmail} = useAuth();
   //from firestore database
   const { addNew } = useFirestore();
 
@@ -41,31 +41,11 @@ const Signup = () => {
     username: "",
     email: "",
     password: "",
-    confirmPassword: "",
+    confirmPassword:""
   });
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
-  // ____________________________________add user details in user collection_____________________________________________
-  useEffect(() => {
-    //Note: One way
-    //currentUser.dispalyName=formData.username; and show in avatarDialog component using this currentUser.dispalyName directly
-
-    // Other way-to store in separate "User" collection and show by fetching only one doc associated with currentUser .
-
-    const addUser = async () => {
-      try {
-        await addNew("Users", {
-          userId: currentUser.uid,
-          username: formData.username,
-        });
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    currentUser && addUser();
-    // eslint-disable-line react-hooks/exhaustive-deps
-  }, [currentUser]);
 
   //____________________________________________handle input fields _____________________________________________________
   function handleInput(e) {
@@ -88,8 +68,7 @@ const Signup = () => {
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
   const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
-  const handleClickShowConfirmPassword = () =>
-    setShowConfirmPassword((show) => !show);
+  const handleClickShowConfirmPassword = () => setShowConfirmPassword((show) => !show);
 
   //_____________________________________________________________showSweetAlertPopup________________________________________
   function showSweetAlertPopup() {
@@ -118,12 +97,7 @@ const Signup = () => {
       /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/;
 
     //if any field is empty
-    if (
-      !formData.username ||
-      !formData.email ||
-      !formData.password ||
-      !formData.confirmPassword
-    )
+    if (!formData.username || !formData.email || !formData.password || !formData.confirmPassword)
       return setError("All fields are required");
     //email validation
     else if (!formData.email.match(emailRegex))
@@ -133,16 +107,18 @@ const Signup = () => {
       return setError(
         "Password must contain min 6 digit characters,1 uppercase letter,1 lowercase letter, 1 digit,1 special character"
       );
-    else if (formData.confirmPassword !== formData.password)
+    else if(formData.confirmPassword!==formData.password)
       return setError("Password not matched");
     else {
       setLoading(true);
       try {
-        const result = await mySignup(formData.email, formData.password);
+        const result=await mySignup(formData.email, formData.password);
+        // intentionally storing in separate collection ,other way is to store the user name in currentUser obj
+        await addNew("Users", {userId: result.user.uid,username: formData.username});
         await myLogout();
         await verifyEmail(result.user);
         showSweetAlertPopup();
-      } catch (err) {
+      }catch (err) {
         if (err.code === "auth/email-already-in-use")
           return setError(
             "email already in use,please login or try with another email"
@@ -233,37 +209,33 @@ const Signup = () => {
               />
             </div>
             {/* password instruction and toggle password icon */}
-            <div className="d-flex justify-content-between">
-              {/* __________Popover for password instructions__________ */}
-              <FaInfoCircle id="passInstruction_icon" onClick={handleClick} />
-              <Popover
-                id={id}
-                open={open}
-                anchorEl={anchorEl}
-                onClose={handleClose}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
-                }}
-              >
-                <Typography sx={{ p: 2, width: "300px" }} id="passPopup">
-                  Password must contain min 6 digit characters,1 uppercase
-                  letter,1 lowercase letter, 1 digit,1 special character.
-                </Typography>
-              </Popover>
-              {/* _______________________Toggle password_______________________ */}
-              <IconButton
-                aria-label="toggle password visibility"
-                onClick={handleClickShowPassword}
-                className="p-0 togglePass_icon"
-              >
-                {showPassword ? (
-                  <VisibilityOff className="visibilityPosition" />
-                ) : (
-                  <Visibility className="visibilityPosition" />
-                )}
-              </IconButton>
-            </div>
+              <div className="d-flex justify-content-between">               
+            {/* __________Popover for password instructions__________ */}
+                <FaInfoCircle id="passInstruction_icon" onClick={handleClick} />
+                <Popover
+                  id={id}
+                  open={open}
+                  anchorEl={anchorEl}
+                  onClose={handleClose}
+                  anchorOrigin={{
+                    vertical: "bottom",
+                    horizontal: "left",
+                  }}
+                >
+                  <Typography sx={{ p: 2, width: "300px" }} id="passPopup">
+                    Password must contain min 6 digit characters,1 uppercase
+                    letter,1 lowercase letter, 1 digit,1 special character.
+                  </Typography>
+                </Popover>
+                {/* _______________________Toggle password_______________________ */}
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  className="p-0 togglePass_icon"
+                >
+                  {showPassword ? <VisibilityOff className="visibilityPosition"/> : <Visibility className="visibilityPosition"/>}
+                </IconButton>
+              </div>
             {/* ----------------------------------------------------confirm password field---------------------------------- */}
             <div className="pb-2">
               <TextField
@@ -277,7 +249,7 @@ const Signup = () => {
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position="start">
-                      <HttpsIcon />
+                      <HttpsIcon/>
                     </InputAdornment>
                   ),
                 }}
@@ -285,28 +257,19 @@ const Signup = () => {
                 variant="standard"
               />
             </div>
-            {/* password instruction and toggle password icon  */}
-            <div>
-              <div className="d-flex justify-content-end">
+              {/* password instruction and toggle password icon  */}
+             <div>
+              <div className="d-flex justify-content-end">               
                 {/* _______________________Toggle password_______________________ */}
-                <IconButton
+                 <IconButton
                   aria-label="toggle password visibility"
                   onClick={handleClickShowConfirmPassword}
                   className="p-0 togglePass_icon"
                 >
-                  {showConfirmPassword ? (
-                    <VisibilityOff
-                      className="visibilityPosition"
-                      style={{ bottom: "19px" }}
-                    />
-                  ) : (
-                    <Visibility
-                      className="visibilityPosition"
-                      style={{ bottom: "19px" }}
-                    />
-                  )}
+                  {showConfirmPassword ? <VisibilityOff className="visibilityPosition" style={{bottom:"19px"}}/> : <Visibility className="visibilityPosition" style={{bottom:"19px"}}/>}
                 </IconButton>
               </div>
+
             </div>
             {/* __________________________________________display error during signup____________________________________________*/}
             {error && (
