@@ -1,0 +1,55 @@
+.react-calendar {
+  width: 20px;
+  max-width: 100%;
+  border: none !important;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+}
+/* week name */
+abbr[data-original-title],
+abbr[title] {
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 900;
+  color: rgb(82, 116, 185);
+}
+/* yr  and navigate btn */
+.react-calendar__navigation button {
+  background: rgb(82, 116, 185) !important;
+  min-width: 27px !important;
+  color: white;
+  font-weight: bold;
+}
+/* sat ,sun days  */
+.react-calendar__month-view__days__day--weekend {
+  color: black !important;
+}
+/* on click dates */
+.react-calendar__tile--active {
+  background-color: white !important;
+  border-radius: 50%;
+}
+.react-calendar__tile:focus {
+  background-color: grey !important;
+  color: white !important;
+  border-radius: 50%;
+}
+/* today date */
+.react-calendar__tile--now {
+  background: white !important;
+  color: black;
+}
+.react-calendar__tile--now:hover {
+  background: #e6e6e6 !important;
+  color: black;
+}
+.highlight {
+  background: rgb(82, 116, 185) !important;
+  border-radius: 50%;
+  font-weight: 600;
+  color: white!important;
+}
+.highlight:focus {
+  background: rgb(125 22 22) !important;
+}

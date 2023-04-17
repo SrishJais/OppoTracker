@@ -1,0 +1,44 @@
+/* ___________________________________________login page___________________________________________ */
+#signup_page {
+  height: 91vh;
+  background-color: #f4f5f6;
+}
+/* ____________________login heading____________________ */
+#signup_heading {
+  font-weight: bolder;
+  font-size: 28px;
+  color: rgb(82, 116, 185);
+}
+/* ____________________input field____________________ */
+#standard-basic1,
+#standard-basic2,
+#standard-password-input,
+#standard-confirmPassword-input {
+  padding: 13px;
+}
+/* password */
+#standard-password-input,
+#standard-confirmPassword-input {
+  padding-right: 36px;
+}
+/*password instruction */
+#passInstruction_icon {
+  color: #a5a5a5;
+  font-size: 21px;
+  cursor: pointer;
+}
+/* toggle password icon */
+.visibilityPosition {
+  position: absolute;
+  bottom: 42px;
+  right: 6px;
+  margin-left: 3px;
+}
+.togglePass_icon:focus {
+  outline: none;
+}
+/* ____________________login btn_______________________ */
+#signup_btn {
+  font-weight: bold;
+  background-color: rgb(82, 116, 185);
+}

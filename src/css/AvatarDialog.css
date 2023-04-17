@@ -1,0 +1,9 @@
+#userInfo {
+  font-size: 30px;
+  color: grey;
+  margin-bottom: -20px;
+}
+#userInfo:hover {
+  color: rgb(82, 116, 185);
+  cursor: pointer;
+}

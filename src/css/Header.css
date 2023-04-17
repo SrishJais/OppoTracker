@@ -1,0 +1,63 @@
+/*___________________________________________________navbar section____________________________________________________________*/
+nav {
+  font-weight: bolder;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px;
+  background-color: white;
+}
+/* navbar positon */
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/*___________________________________________________ navbar logo and app name_______________________________________________ */
+.navbar-brand,
+#app_name {
+  margin-right: 5px;
+  color: #1c1b6de6;
+}
+
+#app_name {
+  font-family: "Shojumaru", cursive;
+  margin-right: 5px;
+  font-size: 20px;
+  color: rgb(82, 116, 185);
+}
+
+/*_________________________________________________________ nav menu link_______________________________________________________ */
+.navbar-light .navbar-nav .nav-link {
+  border-bottom: 4px solid white;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  border-bottom: 4px solid rgb(82, 116, 185);
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: rgb(82, 116, 185);
+}
+
+/* ______________________________________________________________login page btn & logout btn_______________________________________ */
+#login_page_btn {
+  font-weight: bold;
+  text-transform: none;
+}
+#logout {
+  color: rgb(82, 116, 185);
+  font-size: 43px;
+  padding: 8px;
+  margin-top: 2px;
+  border-radius: 50%;
+}
+#logout:hover {
+  cursor: pointer;
+}
+#logout:focus {
+  outline: none;
+}
+#login_page_btn {
+  background-color: rgb(82, 116, 185);
+}

@@ -1,0 +1,88 @@
+#details_page {
+  background-color: #f4f5f6;
+  min-height: 91vh;
+}
+/*________________________details_heading____________ */
+#details_heading {
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+}
+/*________________details header section_______________ */
+#details_header_section {
+  background-color:black;
+  color: #f8f9fa;
+  border-radius: 4px;
+  width: 100%;
+}
+/* details icon */
+#details_icon {
+  font-size: xx-large;
+  font-weight: bolder;
+}
+/* Opportunity name */
+#details_opp_name {
+  color: white;
+}
+/* Apply status */
+.apply_status,
+#appliedClass {
+  background-color: #12b9b6;
+  border-radius: 14px;
+  font-weight: bold;
+  color: white;
+  padding: 4px;
+}
+/* _____________________Description/Notes___________________ */
+#description {
+  color: grey;
+  font-weight: 500;
+}
+/* _________________Details of a opportunity________________ */
+.details_item {
+  display: flex;
+  justify-content: space-between;
+  margin-top:8px;
+  margin-bottom: 8px;
+}
+/* details item_label */
+.details_label {
+  color: grey;
+  font-weight: 700;
+}
+/* apply link url */
+.details_item a:hover {
+  text-decoration: none;
+}
+#pendingClass {
+  background-color: orange;
+  color: white;
+  border-radius: 14px;
+  font-weight: bold;
+}
+#regisOpen {
+  color:rgb(57 208 88);
+}
+#regisClosed {
+  color: red;
+}
+/*__________________________Edit details__________________________________ */
+#details_edit_icon {
+  background-color: orange;
+  border-radius: 50%;
+  font-size: 32px;
+  padding: 3px;
+  color: white;
+}
+/*__________________________Share btn and share icon__________________________________ */
+#share_btn {
+  font-weight: bold;
+  text-transform: none;
+  background-color: rgb(82, 116, 185);
+}
+#share_icon {
+  color: white;
+  margin-left: 0px;
+  border-radius: 50%;
+  padding: 3px;
+}

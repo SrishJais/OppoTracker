@@ -1,0 +1,57 @@
+/* -----------------------------------------------------------Table--------------------------------------------------------------- */
+#table .tableHeader {
+  font-weight: bold;
+  color: white;
+  background: rgb(82, 116, 185);
+  font-size: medium;
+  border: none;
+  z-index: 0;
+}
+#table .tableBodyCell {
+  font-weight: bold;
+  opacity: 0.6;
+}
+/* opportunity name */
+#ListItem_oppName {
+  color: #1a0080;
+  font-size: medium;
+}
+/* apply status */
+#ListItem_status {
+  background-color: #12b9b6;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+}
+/* -------------------------------------------------------------Actions------------------------------------------------------------- */
+#track_edit_icon {
+  background-color: orange;
+  border-radius: 50%;
+  font-size: 29px;
+  padding: 3px;
+  color: white;
+}
+/* delete icon */
+#track_delete_icon {
+  color: white;
+  background-color: #d32f2f;
+  border-radius: 50%;
+  font-size: 29px;
+  padding: 3px;
+}
+#deleteBtn:focus,
+#editBtn:focus {
+  outline: none;
+}
+/* ------------------------------------------------------------------details more btn----------------------------------------------------*/
+#more_btn {
+  background-color: rgb(82, 116, 185);
+  text-transform: none;
+  font-weight: bold;
+}
+/* --------------------------------------------------------------no search result matched---------------------------------------- */
+#noResult {
+  color: #b4aeae;
+  font-weight: bolder;
+  font-size: 19px;
+}

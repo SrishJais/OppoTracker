@@ -1,0 +1,10 @@
+/* ------------------------------------------------------filter and sort label--------------------------------------------- */
+#filter_icon,
+#sort_icon {
+  color: grey;
+}
+#filter_label,
+#sort_label {
+  font-weight: bold;
+  color: rgb(82, 116, 185);
+}

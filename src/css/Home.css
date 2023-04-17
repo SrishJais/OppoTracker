@@ -1,0 +1,28 @@
+/*__________________________________Backgroung responsive img for landing page___________________________________ */
+#image {
+  background: linear-gradient(rgb(65 66 68 / 80%), rgb(60 61 63 / 75%)),
+    url("../assets/landing_img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  min-height: 91vh;
+}
+
+/*__________________________________________heading text and btn__________________________________________________ */
+#landing_content {
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+}
+
+#landing_heading {
+  color: orange;
+  text-align: left;
+}
+
+#getStarted_btn {
+  background-color: orange;
+  font-weight: bold;
+}

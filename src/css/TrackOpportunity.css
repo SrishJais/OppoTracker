@@ -1,0 +1,50 @@
+#track_page {
+  background-color: #f4f5f6;
+  min-height: 91vh;
+}
+/* List heading */
+#track_heading {
+  color: black;
+  font-weight: bold;
+  font-size: x-large;
+}
+/* __________________________________________________track heading__________________________________________- */
+#table_name {
+  font-weight: bolder;
+  font-size: 20px;
+  color: #0606b5;
+}
+/* _____________________________________________Cards & deadline calendar____________________________________ */
+#cardCalendar {
+  display: flex;
+  justify-content: space-evenly;
+}
+/* _________________________________________add, clear all,pdf buttons__________________________________________________________  */
+/* add page btn */
+#track_addnew_btn {
+  font-weight: bold;
+  background-color: rgb(82, 116, 185);
+}
+/* clear All btn */
+#track_clear_btn {
+  font-weight: bold;
+  background-color: rgb(82, 116, 185);
+}
+#exportPdf_icon {
+  color: grey;
+  font-size: 34px;
+}
+#exportPdf_icon:hover {
+  color: brown;
+  font-size: 34px;
+}
+#exportPdf_icon:focus {
+  outline: none;
+}
+/* _________________________________________Table_____________________________________________  */
+/* Table heading */
+#table_heading {
+  font-size: 22px;
+  color: black;
+  font-weight: 600;
+}

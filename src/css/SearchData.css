@@ -1,0 +1,12 @@
+/* search section */
+#searchSection {
+  margin-top: 13px;
+  margin-left: 2px;
+  margin-right: 2px;
+  width: 100%;
+}
+/* search & clear icon */
+#clearSearchTerm_icon:focus,
+#searchTerm_icon:focus {
+  outline: none;
+}

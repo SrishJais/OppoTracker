@@ -1,0 +1,56 @@
+/* ___________________________________________login page___________________________________________ */
+#login_page {
+  min-height: 91vh;
+  background-color: #f4f5f6;
+}
+/* ____________________login heading____________________ */
+#login_heading {
+  font-weight: bolder;
+  font-size: 28px;
+  color: rgb(82, 116, 185);
+}
+/* ____________________input field____________________ */
+#standard-basic,
+#standard-password-input {
+  padding: 13px;
+}
+/* ____________________login btn____________________ */
+#login_btn {
+  font-weight: bold;
+  background-color: rgb(82, 116, 185);
+}
+/* _________line with text at middle___________________ */
+#horizontal-line::before,
+#horizontal-line::after {
+  content: "";
+  display: block;
+  flex: 1 1;
+  margin: auto;
+  border-bottom: 2px solid #b9babb;
+}
+#horizontal-line {
+  display: flex;
+  flex-direction: row;
+  color: #b9babb;
+  font-weight: bolder;
+}
+#horizontal-line:before,
+#horizontal-line:after {
+  content: "";
+  flex: 1 1;
+  width: 10px;
+}
+#resendEmailVerify {
+  color: rgb(82, 116, 185);
+  cursor: pointer;
+}
+/* ____________________google icon____________________ */
+#google_icon {
+  background-color: white;
+  color: grey;
+  cursor: pointer;
+  font-size: 16px;
+}
+#google_icon:hover {
+  outline: none;
+}

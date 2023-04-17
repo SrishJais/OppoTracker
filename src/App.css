@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.link_comp {
+  color: rgb(82, 116, 185);
+}
+/* Link component of router */
+.link_comp:hover {
+  text-decoration: none;
+}
+/* remove autofill background in form */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+}
+/* -----------------------------------------------------------Custom scrollbar--------------------------------------------------------------- */
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

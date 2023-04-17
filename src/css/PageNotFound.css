@@ -1,0 +1,32 @@
+#pageNotFound_page {
+  height: 91vh;
+  background-image: linear-gradient(
+    to top,
+    rgb(251, 194, 235) 0%,
+    rgb(166, 193, 238) 100%
+  );
+}
+
+#pageNotFound_section {
+  background-color: #f4f5f6;
+}
+
+#pageNotFound_heading {
+  font-weight: bolder;
+  font-size: 28px;
+  font-size: 100px;
+  background-image: linear-gradient(to right, #bc6f7b, #8260b6);
+  background-clip: text;
+  color: transparent;
+}
+
+#oops_subheading {
+  opacity: 0.6;
+}
+
+/* gotoHome page btn  */
+#gotoHome_btn {
+  font-weight: bold;
+  text-transform: none;
+  background-color: rgb(82, 116, 185);
+}

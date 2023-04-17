@@ -1,0 +1,78 @@
+/* ___________________________________________addupdate page___________________________________________ */
+#form_addUpdate_page {
+  background-color: #f4f5f6;
+  min-height: 91vh;
+}
+/* ____________________addupdate heading____________________ */
+#form_addUpdate_heading {
+  font-weight: bolder;
+  font-size: 20px;
+  color: white;
+  background-color: #27275c;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+/* ____________________form field labels____________________ */
+.form_addUpdate_label {
+  color: #27275c;
+  font-weight: bolder;
+  font-size: 17px;
+}
+/* ____________________form fields styling____________________ */
+.form-control {
+  font-weight: 700;
+  color: #7e7575;
+  border: 3px solid #f3f3f3;
+}
+.form-control:focus {
+  border: 3px solid grey;
+  outline: 0;
+  box-shadow: none;
+}
+/* date & status*/
+.oneOppDate,
+.oneOppDate:focus,
+#oneOppStatus {
+  cursor: pointer;
+}
+#oneOppStatus option {
+  background-color: white;
+  color: rgb(82, 116, 185);
+  padding: 5px;
+  font-weight: bold;
+}
+/* date picker */
+/* __________allow open of date picker on clicking the input elm____________ */
+input.datePicker {
+  position: relative;
+  overflow: hidden;
+}
+input.datePicker::-webkit-calendar-picker-indicator {
+  width:100%;/* allow click then open within whole input elm  */
+  display: block;
+  top: 0;
+  left: 0;
+  background: #0000;
+  position: absolute;
+  transform: scale(12);
+}
+/* __________allow open of date picker on clicking the input elm end____________ */
+/* date picker icon */
+.calendar_icon{
+  font-size: 25px;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+/* ____________________textarea____________________ */
+textarea {
+  resize: none;
+  /* to avoid scroll bar */
+  overflow: hidden;
+}
+/* ____________________add update btn____________________ */
+#form_addUpdate_btn {
+  font-weight: bold;
+  text-transform: none;
+  background-color: #27275c;
+}
