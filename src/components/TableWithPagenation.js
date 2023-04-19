@@ -17,8 +17,6 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
-//for loading
-import { TailSpin } from "react-loader-spinner";
 //sweet alert
 import swal from "sweetalert";
 //moment package
@@ -190,7 +188,7 @@ export default function TableWithPagenation() {
                         {/* edit icon */}
                         <Tooltip title="Edit">
                           <Link to={`/addUpdate/${id}`} className="link_comp">
-                            <IconButton id="editBtn">
+                            <IconButton id="editBtn" className="p-0 mr-1">
                               <EditIcon id="track_edit_icon" />
                             </IconButton>
                           </Link>
@@ -200,6 +198,7 @@ export default function TableWithPagenation() {
                           <IconButton
                             onClick={() => ConfirmDeletePopup(id)}
                             id="deleteBtn"
+                            className="p-0 ml-1"
                           >
                             <DeleteIcon id="track_delete_icon" />
                           </IconButton>
