@@ -13,7 +13,6 @@ import AddUpdateListItem from "./pages/AddUpdateListItem";
 import Details from "./pages/Details";
 import ForgotPassword from "./pages/ForgotPassword";
 import PageNotFound from "./pages/PageNotFound";
-import ResetPassword from "./pages/ResetPassword";
 
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -79,7 +78,6 @@ function App() {
                 </Route> */}
 
               <Route path="/forgotpassword" element={<ForgotPassword />} />
-              <Route path="/resetpassword" element={<ResetPassword />} />
               <Route path="/*" element={<PageNotFound />} />
             </Routes>
           </conditionalOppDataContext.Provider>
