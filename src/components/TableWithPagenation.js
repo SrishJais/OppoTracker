@@ -198,7 +198,6 @@ export default function TableWithPagenation() {
                           <IconButton
                             onClick={() => ConfirmDeletePopup(id)}
                             id="deleteBtn"
-                            className="p-0"
                           >
                             <DeleteIcon id="track_delete_icon" />
                           </IconButton>
