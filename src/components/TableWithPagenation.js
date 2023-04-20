@@ -188,7 +188,7 @@ export default function TableWithPagenation() {
                         {/* edit icon */}
                         <Tooltip title="Edit">
                           <Link to={`/addUpdate/${id}`} className="link_comp">
-                            <IconButton id="editBtn" className="p-0 pr-1">
+                            <IconButton id="editBtn">
                               <EditIcon id="track_edit_icon" />
                             </IconButton>
                           </Link>
