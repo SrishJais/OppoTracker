@@ -12,14 +12,14 @@ Get a competitive edge by utilizing OppoTracker web app  that provides CRUD func
 
 ## Features - 
 
-### i)add,update and delete an opportunity
-### ii)clear all opportunities together
-### iii)search opportunity by opportunity name 
-### iv)filter opportunities by all,applied,pending,open,closed
-### v)sort opportunities by new to old,old to new, deadline
-### vi)download all added  opportunities as pdf
-### viii)Share an opportunity link
-### ix)upcoming deadline calendar that helps to quickly know about those opportunities whose application are still open and we isn't applied yet .It can also filter the opportunity by clicking on the calender dates.
+#### i)add,update and delete an opportunity
+#### ii)clear all opportunities together
+#### iii)search opportunity by opportunity name 
+#### iv)filter opportunities by all,applied,pending,open,closed
+#### v)sort opportunities by new to old,old to new, deadline
+#### vi)download all added  opportunities as pdf
+#### viii)Share an opportunity link
+#### ix)upcoming deadline calendar that helps to quickly know about those opportunities whose application are still open and we isn't applied yet .It can also filter the opportunity by clicking on the calender dates.
 
 It has login,logout,forgot password ,email verification functionality made using firebase.
 
