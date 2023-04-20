@@ -62,7 +62,7 @@ input.datePicker::-webkit-calendar-picker-indicator {
   font-size: 25px;
   position: absolute;
   right: 20px;
-  bottom: 8px;
+  bottom: 10px;
 }
 /* ____________________textarea____________________ */
 textarea {
