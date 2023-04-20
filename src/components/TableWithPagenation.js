@@ -188,7 +188,7 @@ export default function TableWithPagenation() {
                         {/* edit icon */}
                         <Tooltip title="Edit">
                           <Link to={`/addUpdate/${id}`} className="link_comp">
-                            <IconButton id="editBtn">
+                            <IconButton id="editBtn" className="p-0 mr-1">
                               <EditIcon id="track_edit_icon" />
                             </IconButton>
                           </Link>
@@ -198,6 +198,7 @@ export default function TableWithPagenation() {
                           <IconButton
                             onClick={() => ConfirmDeletePopup(id)}
                             id="deleteBtn"
+                            className="p-0"
                           >
                             <DeleteIcon id="track_delete_icon" />
                           </IconButton>
