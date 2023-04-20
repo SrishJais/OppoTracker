@@ -66,17 +66,6 @@ function App() {
                 path="/details/:id"
                 element={<ProtectedRoute Cmp={<Details />} />}
               />
-
-              {/* 
-                <Route element={<ProtectedRoute />}>
-                  <Route path="/track" element={<TrackOpportunity />} />
-                  <Route
-                    path="/addUpdate/:id?"
-                    element={<AddUpdateListItem />}
-                  />
-                  <Route path="/details/:id" element={<Details />} />
-                </Route> */}
-
               <Route path="/forgotpassword" element={<ForgotPassword />} />
               <Route path="/*" element={<PageNotFound />} />
             </Routes>
