@@ -2,7 +2,7 @@
 import "../css/ForgotPassword.css";
 //import from package
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Box, Button, Paper, TextField } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import InputAdornment from "@mui/material/InputAdornment";
@@ -16,7 +16,6 @@ import swal from "sweetalert";
 import { TailSpin } from "react-loader-spinner";
 //for authentication
 import { useAuth } from "../myFirebase/myAuthFirebase";
-
 // ___________________________________________________________forgot password section_______________________________________________
 
 const ForgotPassword = () => {
@@ -26,6 +25,7 @@ const ForgotPassword = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   //showSweetAlertPopup when successfully signed up
   function showSweetAlertPopup() {
@@ -33,6 +33,12 @@ const ForgotPassword = () => {
       title: "Success",
       text: "Email sent ,check your email to reset the password.",
       icon: "success",
+      closeOnClickOutside: false,
+    }).then((willRedirect) => {
+      if (willRedirect) {
+        //replace only last arg of current path
+        navigate("../login");
+      }
     });
   }
   // __________________________________________________handle sending password reset link___________________________________________
