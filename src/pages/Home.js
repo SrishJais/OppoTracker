@@ -19,7 +19,12 @@ const Home = () => {
           >
             <h2 id="landing_heading">Welcome to OppoTracker!!! </h2>
             <p className="py-3 text-left" id="landing-text">
-             Get a competitive edge by utilizing OppoTracker web app that provides CRUD functionalities, powerful search and sort capabilities,and filtering options to track and manage the opportunities.With our platform, you can effortlessly store and organize all the relevant information regarding your opportunities to ensure you never miss important deadlines.
+              Get a competitive edge by utilizing OppoTracker web app that
+              provides CRUD functionalities, powerful search and sort
+              capabilities,and filtering options to track and manage the
+              opportunities.With our platform, you can effortlessly store and
+              organize all the relevant information regarding your opportunities
+              to ensure you never miss important deadlines.
             </p>
             <div className="d-flex justify-content-start">
               <Link to="/track" className="link_comp ">
