@@ -5,6 +5,9 @@
 html {
   scroll-behavior: smooth;
 }
+body{
+  margin:0;
+}
 .row {
   margin-right: 0px;
   margin-left: 0px;
