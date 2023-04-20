@@ -1,7 +1,7 @@
 // import css file
 import "../css/Signup.css";
 //import from package
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Box, Button, Paper, TextField } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
