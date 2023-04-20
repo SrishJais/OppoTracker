@@ -33,7 +33,7 @@ const Header = () => {
   };
   return (
     <nav id="navbar" className="navbar navbar-expand-lg navbar-light">
-      <div className="mx-3 d-flex justify-content-between w-100">
+      <div className="d-flex justify-content-between w-100">
         {/* _____________________________________________logo and brand name section____________________________________ */}
         <Link to="/home" className="link_comp">
           {/* logo */}
