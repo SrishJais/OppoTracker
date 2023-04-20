@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+/* Note: overflox-x is used in html,body tag to avoid unwanted horizontal scroll during animation */
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
