@@ -119,7 +119,7 @@ const ForgotPassword = () => {
                 {loading ? (
                   <TailSpin height="30" color="grey" />
                 ) : (
-                  "SEND RESET EMAIL"
+                  "SEND PASSWORD RESET EMAIL"
                 )}
               </Button>
             </div>
